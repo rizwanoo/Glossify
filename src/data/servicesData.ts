@@ -16,7 +16,7 @@ export const VERIFIED_SERVICES: ServiceItem[] = [
     ],
     recommendedFor: 'Routine weekly or bi-weekly maintenance for sedans, SUVs, and daily drivers.',
     tag: 'Maintenance Care',
-    image: '/src/assets/images/hero_detailing_foam_1793786285151.jpg',
+    image: '/images/hero_detailing_foam_1793786285151.jpg',
     idealInterval: 'Every 1 to 2 weeks'
   },
   {
@@ -34,7 +34,7 @@ export const VERIFIED_SERVICES: ServiceItem[] = [
     ],
     recommendedFor: 'Cars carrying children or pets, post-summer rejuvenation, or vehicles with stubborn interior grime.',
     tag: 'Cabin Hygiene',
-    image: '/src/assets/images/interior_steam_leather_1793786287269.jpg',
+    image: '/images/interior_steam_leather_1793786287269.jpg',
     idealInterval: 'Every 2 to 3 months'
   },
   {
@@ -52,7 +52,7 @@ export const VERIFIED_SERVICES: ServiceItem[] = [
     ],
     recommendedFor: 'Vehicles with visible wash swirls, dull paint, or pre-event showroom preparation.',
     tag: 'Paint Correction',
-    image: '/src/assets/images/machine_polishing_gloss_1793786287600.jpg',
+    image: '/images/machine_polishing_gloss_1793786287600.jpg',
     idealInterval: 'Every 6 months'
   },
   {
@@ -70,7 +70,7 @@ export const VERIFIED_SERVICES: ServiceItem[] = [
     ],
     recommendedFor: 'Vehicle owners demanding complete showroom renewal without leaving home or office.',
     tag: 'Complete Package',
-    image: '/src/assets/images/mobile_van_doorstep_1793786285560.jpg',
+    image: '/images/mobile_van_doorstep_1793786285560.jpg',
     idealInterval: 'Every 3 to 6 months'
   },
   {
@@ -88,7 +88,7 @@ export const VERIFIED_SERVICES: ServiceItem[] = [
     ],
     recommendedFor: 'Vehicles parked outdoors or frequently driven across highways in Bahrain.',
     tag: 'Surface Defense',
-    image: '/src/assets/images/flawless_beading_finish_1793786289182.jpg',
+    image: '/images/flawless_beading_finish_1793786289182.jpg',
     idealInterval: 'Every 4 to 6 months'
   }
 ];

@@ -84,8 +84,8 @@ export const GalleryPage: React.FC<GalleryPageProps> = () => {
 
           <div className="max-w-4xl mx-auto">
             <BeforeAfterSlider
-              beforeImage="/src/assets/images/machine_polishing_gloss_1793786287600.jpg"
-              afterImage="/src/assets/images/flawless_beading_finish_1793786289182.jpg"
+              beforeImage="/images/machine_polishing_gloss_1793786287600.jpg"
+              afterImage="/images/flawless_beading_finish_1793786289182.jpg"
               beforeLabel="Before: Surface Swirls & Desert Sand Haze"
               afterLabel="After: GLOSSIFY Mirror Reflection"
               vehicleLabel="Porsche 911 Carrera S · Clear Coat Correction in Bahrain"

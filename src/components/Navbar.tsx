@@ -78,16 +78,16 @@ export const Navbar: React.FC<NavbarProps> = ({
       ref={navRef}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? 'bg-white/95 backdrop-blur-md border-b border-neutral-200/80 shadow-md py-2 sm:py-3'
-          : 'bg-gradient-to-b from-black/60 via-black/30 to-transparent border-b border-white/10 py-3 sm:py-4'
+          ? 'bg-white border-b border-neutral-200 shadow-md py-2'
+          : 'bg-gradient-to-b from-black/80 via-black/20 to-transparent border-b border-white/10 py-3'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between gap-2 sm:gap-4 md:gap-8 min-h-[44px]">
-          {/* Zone 1: Brand wordmark / identity */}
+        <div className="flex items-center justify-between gap-4 md:gap-8 h-14 sm:h-16">
+          {/* Brand Identity */}
           <button
             onClick={() => handleLinkClick('home')}
-            className="flex items-center gap-2 sm:gap-3 text-left focus-visible:outline-2 focus-visible:outline-[#E52332] rounded-md cursor-pointer shrink-0 no-wrap-stable"
+            className="flex items-center gap-2 sm:gap-3 focus-visible:ring-2 focus-visible:ring-[#E52332] rounded-lg cursor-pointer shrink-0"
             aria-label="Glossify BH Home"
           >
             <BrandLogo
@@ -97,70 +97,67 @@ export const Navbar: React.FC<NavbarProps> = ({
             />
           </button>
 
-          {/* Zone 2: Desktop nav links - Hidden at 768px (md) and below */}
-          <nav className="hidden md:flex items-center justify-center flex-1 min-w-0 px-2 sm:px-4">
-            <div className="flex items-center gap-3 lg:gap-6 xl:gap-8 overflow-hidden">
+          {/* Desktop Nav - Hidden < 1024px (lg) for better spacing */}
+          <nav className="hidden lg:flex items-center justify-center flex-1">
+            <div className="flex items-center gap-1 xl:gap-4">
               {navLinks.map((link) => {
                 const isActive = currentPage === link.id;
                 return (
                   <button
                     key={link.id}
                     onClick={() => handleLinkClick(link.id)}
-                    className={`text-[clamp(12px,1.2vw,14px)] font-semibold tracking-tight transition-colors no-wrap-stable cursor-pointer relative py-1 shrink ${
+                    className={`px-3 py-2 text-sm font-bold tracking-tight transition-all relative group cursor-pointer ${
                       scrolled
-                        ? isActive
-                          ? 'text-[#E52332]'
-                          : 'text-neutral-700 hover:text-[#E52332]'
-                        : isActive
-                        ? 'text-[#E52332]'
-                        : 'text-neutral-200 hover:text-white'
+                        ? isActive ? 'text-[#E52332]' : 'text-neutral-700 hover:text-[#E52332]'
+                        : isActive ? 'text-white' : 'text-neutral-200 hover:text-white'
                     }`}
                   >
-                    {link.label}
-                    {isActive && (
-                      <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#E52332] rounded-full" />
-                    )}
+                    <span>{link.label}</span>
+                    <span className={`absolute bottom-1 left-3 right-3 h-0.5 bg-[#E52332] transition-transform duration-300 origin-left ${isActive ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'}`} />
                   </button>
                 );
               })}
             </div>
           </nav>
 
-          {/* Zone 3: Desktop Actions - Hidden at 768px (md) and below */}
-          <div className="hidden md:flex items-center gap-3 lg:gap-5 shrink-0 no-wrap-stable">
+          {/* Right Actions (Desktop) */}
+          <div className="hidden lg:flex items-center gap-4 shrink-0">
             <a
               href="tel:+97366978531"
-              className={`flex items-center gap-1.5 text-[clamp(10px,1vw,12px)] font-bold transition-colors ${
+              className={`flex items-center gap-2 text-sm font-bold transition-colors ${
                 scrolled ? 'text-neutral-700 hover:text-[#E52332]' : 'text-neutral-200 hover:text-white'
               }`}
-              title="Call Glossify BH"
             >
-              <Phone className="w-3.5 h-3.5 text-[#E52332] shrink-0" />
-              <span className="hidden lg:inline">+973 6697 8531</span>
+              <div className="w-8 h-8 rounded-full bg-[#E52332]/10 flex items-center justify-center">
+                <Phone className="w-4 h-4 text-[#E52332]" />
+              </div>
+              <span className="hidden xl:inline">+973 6697 8531</span>
             </a>
 
             <button
               onClick={() => onBookNow()}
-              className="px-[clamp(10px,1.2vw,16px)] py-2 text-[clamp(10px,0.8vw,11px)] font-black uppercase tracking-wider text-white bg-[#E52332] hover:bg-[#c91826] active:scale-95 transition-all shadow-md rounded-lg cursor-pointer no-wrap-stable"
+              className="px-6 py-2.5 bg-[#E52332] hover:bg-[#c91826] active:scale-95 text-white rounded-xl font-bold text-xs uppercase tracking-widest transition-all shadow-lg shadow-[#E52332]/20 cursor-pointer"
             >
               Book Now
             </button>
           </div>
 
-          {/* Mobile hamburger button - Shown at 768px (md) and below */}
-          <div className="flex md:hidden items-center gap-1.5 sm:gap-2 shrink-0">
+          {/* Tablet & Mobile Actions */}
+          <div className="flex lg:hidden items-center gap-2 sm:gap-4 shrink-0">
             <button
               onClick={() => onBookNow()}
-              className="px-2.5 py-1.5 text-[10px] font-black uppercase text-white bg-[#E52332] rounded-md cursor-pointer no-wrap-stable"
+              className="px-4 py-2 bg-[#E52332] hover:bg-[#c91826] active:scale-95 text-white rounded-lg font-bold text-[10px] sm:text-xs uppercase tracking-widest transition-all shadow-md cursor-pointer"
             >
-              Book
+              Book Service
             </button>
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className={`p-1.5 rounded-lg cursor-pointer transition-colors focus:outline-none ${
-                scrolled ? 'text-neutral-800 hover:bg-neutral-100' : 'text-white hover:bg-white/10'
+              className={`p-2 rounded-xl transition-all cursor-pointer border ${
+                scrolled 
+                  ? 'text-neutral-800 bg-neutral-100 border-neutral-200' 
+                  : 'text-white bg-white/10 border-white/20'
               }`}
-              aria-label="Toggle navigation menu"
+              aria-label="Toggle Menu"
             >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
@@ -168,63 +165,78 @@ export const Navbar: React.FC<NavbarProps> = ({
         </div>
       </div>
 
-      {/* Mobile Full-Width Dropdown Menu */}
+      {/* Mobile Backdrop */}
       <div 
-        className={`md:hidden absolute top-full left-0 right-0 bg-white border-b border-neutral-200 shadow-2xl transition-all duration-300 transform origin-top ${
-          mobileMenuOpen ? 'scale-y-100 opacity-100 visible' : 'scale-y-0 opacity-0 invisible'
+        className={`lg:hidden fixed inset-0 bg-black/60 transition-opacity duration-300 ${
+          mobileMenuOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
+        }`}
+        onClick={() => setMobileMenuOpen(false)}
+      />
+
+      {/* Mobile Sidebar / Menu */}
+      <div 
+        className={`lg:hidden fixed top-0 right-0 bottom-0 w-[80%] max-w-sm bg-white shadow-2xl transition-transform duration-300 ease-out transform ${
+          mobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
-        <div className="px-4 py-6 space-y-2 max-h-[calc(100vh-80px)] overflow-y-auto">
-          {navLinks.map((link) => {
-            const isActive = currentPage === link.id;
-            return (
-              <button
-                key={link.id}
-                onClick={() => handleLinkClick(link.id)}
-                className={`w-full text-left px-4 py-4 text-base font-bold rounded-xl transition-all flex items-center justify-between ${
-                  isActive
-                    ? 'bg-red-50 text-[#E52332]'
-                    : 'text-neutral-800 hover:bg-neutral-50 active:bg-neutral-100'
-                }`}
-              >
-                <span>{link.label}</span>
-                {isActive ? (
-                  <div className="w-2 h-2 rounded-full bg-[#E52332]" />
-                ) : (
-                  <Menu className="w-4 h-4 text-neutral-300" />
-                )}
-              </button>
-            );
-          })}
+        <div className="flex flex-col h-full">
+          <div className="p-6 border-b border-neutral-100 flex items-center justify-between">
+            <BrandLogo theme="light" size="sm" />
+            <button 
+              onClick={() => setMobileMenuOpen(false)}
+              className="p-2 text-neutral-500 hover:text-neutral-900"
+            >
+              <X className="w-6 h-6" />
+            </button>
+          </div>
 
-          <div className="pt-6 mt-4 border-t border-neutral-100 space-y-4">
+          <div className="flex-1 overflow-y-auto p-6 space-y-2">
+            {navLinks.map((link) => {
+              const isActive = currentPage === link.id;
+              return (
+                <button
+                  key={link.id}
+                  onClick={() => handleLinkClick(link.id)}
+                  className={`w-full text-left px-5 py-4 rounded-2xl text-base font-bold transition-all flex items-center justify-between ${
+                    isActive
+                      ? 'bg-red-50 text-[#E52332]'
+                      : 'text-neutral-800 hover:bg-neutral-50'
+                  }`}
+                >
+                  <span>{link.label}</span>
+                  {isActive && <div className="w-1.5 h-1.5 rounded-full bg-[#E52332]" />}
+                </button>
+              );
+            })}
+          </div>
+
+          <div className="p-6 border-t border-neutral-100 space-y-4">
             <div className="grid grid-cols-2 gap-3">
               <a
                 href="tel:+97366978531"
-                className="flex items-center justify-center gap-2 py-4 px-3 bg-neutral-100 rounded-xl text-neutral-900 font-bold text-sm active:scale-95 transition-transform"
+                className="flex flex-col items-center justify-center gap-2 py-4 bg-neutral-100 rounded-2xl text-neutral-900 font-bold text-xs"
               >
-                <Phone className="w-4 h-4 text-[#E52332]" />
-                <span>Call</span>
+                <Phone className="w-5 h-5 text-[#E52332]" />
+                <span>Call Us</span>
               </a>
               <a
-                href="https://wa.me/97339888566"
+                href="https://wa.me/97366978531"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 py-4 px-3 bg-emerald-50 rounded-xl text-emerald-800 font-bold text-sm active:scale-95 transition-transform"
+                className="flex flex-col items-center justify-center gap-2 py-4 bg-emerald-50 rounded-2xl text-emerald-800 font-bold text-xs"
               >
-                <MessageSquare className="w-4 h-4 text-emerald-600" />
+                <MessageSquare className="w-5 h-5 text-emerald-600" />
                 <span>WhatsApp</span>
               </a>
             </div>
-
             <button
               onClick={() => {
                 setMobileMenuOpen(false);
                 onBookNow();
               }}
-              className="w-full py-4.5 text-sm font-black uppercase tracking-widest text-white bg-[#E52332] rounded-xl text-center shadow-xl shadow-red-200 active:scale-[0.98] transition-all cursor-pointer"
+              className="w-full py-4 bg-[#E52332] text-white rounded-2xl font-black text-sm uppercase tracking-widest shadow-xl shadow-red-100 active:scale-95 transition-all"
             >
-              Book Doorstep Service
+              Book Doorstep Visit
             </button>
           </div>
         </div>
