@@ -1,0 +1,6 @@
+{
+  "name": "Glossify - Mobile Car Wash & Polish Bahrain",
+  "description": "Premium mobile car wash, machine polishing, and deep detailing service delivered directly to your doorstep across the Kingdom of Bahrain.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
