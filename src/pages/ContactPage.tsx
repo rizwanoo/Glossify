@@ -68,7 +68,7 @@ export const ContactPage: React.FC<ContactPageProps> = () => {
 *Location:* ${formData.locationArea} (${formData.governorate})
 ${formData.notes ? `*Special Notes:* ${formData.notes}` : ''}
 ----------------------------------------
-*Sent via Official Glossify Web Portal*`;
+*Sent via Official Glossify BH Web Portal*`;
 
     const encoded = encodeURIComponent(message);
     const url = `https://wa.me/973${formData.targetNumber}?text=${encoded}`;
@@ -130,7 +130,7 @@ ${formData.notes ? `*Special Notes:* ${formData.notes}` : ''}
                     <span>Call Hotline</span>
                   </a>
                   <a
-                    href="https://wa.me/97366978531?text=Hello%20Glossify,%20I%20would%20like%20to%20book%20a%20car%20wash%20or%20polishing%20service."
+                    href="https://wa.me/97366978531?text=Hello%20Glossify%20BH,%20I%20would%20like%20to%20book%20a%20car%20wash%20or%20polishing%20service."
                     target="_blank"
                     rel="noopener noreferrer"
                     className="px-4 py-2 bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold rounded-lg transition-colors inline-flex items-center gap-1.5"
@@ -165,7 +165,7 @@ ${formData.notes ? `*Special Notes:* ${formData.notes}` : ''}
                     <span>Call Line</span>
                   </a>
                   <a
-                    href="https://wa.me/97339888566?text=Hello%20Glossify,%20I%20would%20like%20to%20book%20a%20car%20wash%20or%20polishing%20service."
+                    href="https://wa.me/97339888566?text=Hello%20Glossify%20BH,%20I%20would%20like%20to%20book%20a%20car%20wash%20or%20polishing%20service."
                     target="_blank"
                     rel="noopener noreferrer"
                     className="px-4 py-2 bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold rounded-lg transition-colors inline-flex items-center gap-1.5"
@@ -207,7 +207,7 @@ ${formData.notes ? `*Special Notes:* ${formData.notes}` : ''}
             <div className="p-6 bg-white rounded-2xl border border-neutral-200 space-y-3.5 text-xs text-neutral-700">
               <div className="flex items-center gap-2.5 font-bold text-neutral-900 text-sm">
                 <ShieldCheck className="w-4 h-4 text-[#E52332]" />
-                <span>Glossify Auto Car Wash Co. W.L.L</span>
+                <span>Glossify BH Auto Car Wash Co. W.L.L</span>
               </div>
               <div className="text-neutral-500 text-[11px] font-sans" dir="rtl">
                 شركة جلوسيفاي لغسيل السيارات ذ.م.م (سجل تجاري - مملكة البحرين)
@@ -276,8 +276,8 @@ ${formData.notes ? `*Special Notes:* ${formData.notes}` : ''}
 
                   <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-4">
                     <a
-                      href={`https://wa.me/973${formData.targetNumber}?text=${encodeURIComponent(
-                        `Hello Glossify, this is ${formData.fullName} following up on my booking request.`
+                        href={`https://wa.me/973${formData.targetNumber}?text=${encodeURIComponent(
+                        `Hello Glossify BH, this is ${formData.fullName} following up on my booking request.`
                       )}`}
                       target="_blank"
                       rel="noopener noreferrer"

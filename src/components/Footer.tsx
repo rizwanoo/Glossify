@@ -29,7 +29,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onBookNow }) => {
 
             <div className="flex flex-wrap items-center gap-3">
               <a
-                href="https://wa.me/97366978531?text=Hello%20Glossify,%20I%20would%20like%20to%20inquire%20about%20booking%20a%20car%20wash%20or%20polishing%20service."
+                href="https://wa.me/97366978531?text=Hello%20Glossify%20BH,%20I%20would%20like%20to%20inquire%20about%20booking%20a%20car%20wash%20or%20polishing%20service."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-5 py-2.5 bg-emerald-600 hover:bg-emerald-500 text-white rounded-lg text-xs font-bold tracking-wide uppercase transition-colors shadow-sm"
@@ -39,7 +39,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onBookNow }) => {
               </a>
 
               <a
-                href="https://wa.me/97339888566?text=Hello%20Glossify,%20I%20would%20like%20to%20book%20a%20doorstep%20service%20in%20Bahrain."
+                href="https://wa.me/97339888566?text=Hello%20Glossify%20BH,%20I%20would%20like%20to%20book%20a%20doorstep%20service%20in%20Bahrain."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-5 py-2.5 bg-neutral-800 hover:bg-neutral-700 text-white rounded-lg text-xs font-bold tracking-wide uppercase border border-neutral-700 transition-colors"
@@ -65,7 +65,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onBookNow }) => {
             <div className="pt-2 text-xs text-neutral-400 space-y-1.5">
               <div className="flex items-center gap-2 text-neutral-300">
                 <ShieldCheck className="w-4 h-4 text-[#E52332] shrink-0" />
-                <span>Glossify Auto Car Wash Co. W.L.L · <span dir="rtl" className="text-neutral-400 font-sans">شركة جلوسيفاي لغسيل السيارات ذ.م.م</span></span>
+                <span>Glossify BH Auto Car Wash Co. W.L.L · <span dir="rtl" className="text-neutral-400 font-sans">شركة جلوسيفاي لغسيل السيارات ذ.م.م</span></span>
               </div>
               <div className="flex items-start gap-2">
                 <MapPin className="w-4 h-4 text-neutral-500 shrink-0 mt-0.5" />

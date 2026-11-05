@@ -28,8 +28,8 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onBookNow }) => 
         {/* Cinematic Backdrop with Crisp, Bright Automotive Detailing Photograph */}
         <div className="absolute inset-0 z-0">
           <img
-            src="/src/assets/images/hero_detailing_foam_1793786285151.jpg"
-            alt="Glossify Automotive Care Bahrain"
+            src="/images/hero_detailing_foam_1793786285151.jpg"
+            alt="Glossify BH Automotive Care Bahrain"
             className="w-full h-full object-cover object-center brightness-105 contrast-105 saturate-110"
           />
           {/* Subtle natural lighting gradient so the background remains bright and visible */}
@@ -151,8 +151,8 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onBookNow }) => 
             <div className="lg:col-span-6 relative">
               <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-neutral-200 aspect-[4/3] group">
                 <img
-                  src="/src/assets/images/mobile_van_doorstep_1793786285560.jpg"
-                  alt="Glossify Mobile Van Detailing on Villa Driveway in Bahrain"
+                  src="/images/mobile_van_doorstep_1793786285560.jpg"
+                  alt="Glossify BH Mobile Van Detailing on Villa Driveway in Bahrain"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
@@ -219,7 +219,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onBookNow }) => 
                   <span className="text-[11px] font-semibold text-[#E52332]">Kingdom of Bahrain</span>
                 </div>
                 <div className="text-neutral-700 font-medium">
-                  Glossify Auto Car Wash Co. W.L.L · <span dir="rtl" className="font-sans font-bold text-neutral-900">شركة جلوسيفاي لغسيل السيارات ذ.م.م</span>
+                  Glossify BH Auto Car Wash Co. W.L.L · <span dir="rtl" className="font-sans font-bold text-neutral-900">شركة جلوسيفاي لغسيل السيارات ذ.م.م</span>
                 </div>
                 <div className="text-neutral-500 text-[11px]">
                   Registered Office: Building 3365B, Road 361, Madinat Hamad 1203 · Operations: <a href="mailto:glossifybahrain@gmail.com" className="text-[#E52332] hover:underline">glossifybahrain@gmail.com</a>
@@ -366,7 +366,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onBookNow }) => 
                 Book Signature Detail
               </button>
               <a
-                href="https://wa.me/97366978531?text=Hello%20Glossify,%20I%20am%20interested%20in%20the%20Signature%20Full%20Detail%20package."
+                href="https://wa.me/97366978531?text=Hello%20Glossify%20BH,%20I%20am%20interested%20in%20the%20Signature%20Full%20Detail%20package."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full sm:w-auto px-6 py-3.5 bg-neutral-800 hover:bg-neutral-700 text-white rounded-xl text-xs font-bold uppercase tracking-wider border border-neutral-700 transition-colors inline-flex items-center justify-center gap-2"
@@ -461,8 +461,8 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onBookNow }) => 
           {/* Interactive Before / After Slider */}
           <div className="max-w-4xl mx-auto mb-16">
             <BeforeAfterSlider
-              beforeImage="/src/assets/images/machine_polishing_gloss_1793786287600.jpg"
-              afterImage="/src/assets/images/flawless_beading_finish_1793786289182.jpg"
+              beforeImage="/images/machine_polishing_gloss_1793786287600.jpg"
+              afterImage="/images/flawless_beading_finish_1793786289182.jpg"
               beforeLabel="Swirled Clear Coat & Oxidation"
               afterLabel="GLOSSIFY Machine Polished & Sealed"
               vehicleLabel="Porsche 911 Carrera S · Metallic Clear Coat Correction"
@@ -473,7 +473,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onBookNow }) => 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             <div className="relative rounded-xl overflow-hidden aspect-[4/3] group border border-neutral-800">
               <img
-                src="/src/assets/images/hero_detailing_foam_1793786285151.jpg"
+                src="/images/hero_detailing_foam_1793786285151.jpg"
                 alt="Snow Foam Pre-wash on Mercedes AMG"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               />
@@ -486,7 +486,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onBookNow }) => 
 
             <div className="relative rounded-xl overflow-hidden aspect-[4/3] group border border-neutral-800">
               <img
-                src="/src/assets/images/interior_steam_leather_1793786287269.jpg"
+                src="/images/interior_steam_leather_1793786287269.jpg"
                 alt="Thermal Leather Steam Detailing"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               />
@@ -499,7 +499,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onBookNow }) => 
 
             <div className="relative rounded-xl overflow-hidden aspect-[4/3] group border border-neutral-800">
               <img
-                src="/src/assets/images/mobile_van_doorstep_1793786285560.jpg"
+                src="/images/mobile_van_doorstep_1793786285560.jpg"
                 alt="Mobile Van Doorstep Detailing Unit in Bahrain"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               />

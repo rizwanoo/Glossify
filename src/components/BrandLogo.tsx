@@ -32,7 +32,7 @@ export const BrandLogo: React.FC<BrandLogoProps> = ({
 
   return (
     <div className={`inline-flex items-center gap-3 font-sans select-none ${className}`}>
-      {/* Official Circular Glossify Brand Badge */}
+      {/* Official Circular Glossify BH Brand Badge */}
       <div className={`relative flex items-center justify-center shrink-0 rounded-full overflow-hidden bg-white shadow-md border-2 border-[#E52332]/40 ${badgeSizes[size]}`}>
         <img
           src={logoSrc}

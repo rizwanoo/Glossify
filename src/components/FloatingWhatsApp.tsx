@@ -3,32 +3,37 @@ import { MessageSquare } from 'lucide-react';
 
 export const FloatingWhatsApp: React.FC = () => {
   return (
-    <aside aria-label="Quick WhatsApp Contact" className="fixed bottom-5 right-4 sm:bottom-6 sm:right-6 z-40 select-none flex items-center gap-2.5 animate-slide-in-br opacity-0">
-      {/* Subtle Tooltip to encourage immediate clicks */}
+    <aside aria-label="Quick WhatsApp Contact" className="fixed bottom-6 right-6 z-40 select-none flex flex-col items-end gap-3 animate-slide-in-br opacity-0">
+      {/* Dynamic Pulse Tooltip */}
       <a
         href="https://wa.me/97366978531?text=Hello%20Glossify%20BH,%20I%20would%20like%20to%20book%20a%20doorstep%20car%20wash%20or%20polishing%20service."
         target="_blank"
         rel="noopener noreferrer"
-        className="hidden md:flex items-center gap-2 px-3 py-1.5 bg-[#121417]/90 text-white rounded-full text-[11px] font-semibold border border-white/10 shadow-lg backdrop-blur-md hover:bg-black transition-all group"
+        className="flex items-center gap-2.5 px-4 py-2 bg-white text-[#17191D] rounded-2xl text-[11px] font-bold border border-neutral-200 shadow-2xl hover:bg-neutral-50 transition-all group scale-95 hover:scale-100"
       >
-        <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-        <span className="text-neutral-200 group-hover:text-white">Online Dispatch · Click to Chat</span>
+        <span className="relative flex h-2 w-2">
+          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#E52332] opacity-75"></span>
+          <span className="relative inline-flex rounded-full h-2 w-2 bg-[#E52332]"></span>
+        </span>
+        <span className="uppercase tracking-widest text-neutral-800">Online Now · Click to Book</span>
       </a>
 
       {/* Main WhatsApp CTA with Radar Ping */}
-      <div className="relative flex items-center justify-center">
-        {/* Subtle pulsing background ring */}
-        <span className="absolute -inset-1 rounded-full bg-emerald-500/30 animate-ping opacity-75 pointer-events-none" />
+      <div className="relative group">
+        {/* Triple Radar Ping Effect */}
+        <span className="absolute -inset-2 rounded-full bg-emerald-500/20 animate-ping [animation-duration:3s] opacity-75 pointer-events-none" />
+        <span className="absolute -inset-1 rounded-full bg-emerald-500/30 animate-ping [animation-duration:2s] opacity-75 pointer-events-none" />
 
         <a
           href="https://wa.me/97366978531?text=Hello%20Glossify%20BH,%20I%20would%20like%20to%20book%20a%20doorstep%20car%20wash%20or%20polishing%20service."
           target="_blank"
           rel="noopener noreferrer"
-          className="relative flex items-center gap-2 px-3.5 py-3 sm:px-4 sm:py-3.5 bg-emerald-600 hover:bg-emerald-500 active:scale-95 text-white rounded-full shadow-2xl transition-all font-bold text-xs uppercase tracking-wider cursor-pointer border border-white/20"
+          className="relative flex items-center gap-3 px-6 py-4 bg-emerald-600 hover:bg-emerald-500 active:scale-95 text-white rounded-3xl shadow-2xl shadow-emerald-500/40 transition-all font-black text-xs uppercase tracking-widest cursor-pointer border border-white/20"
           aria-label="Direct WhatsApp Booking"
         >
           <MessageSquare className="w-5 h-5 fill-current" />
           <span className="hidden sm:inline">WhatsApp Booking</span>
+          <span className="sm:hidden">WhatsApp</span>
         </a>
       </div>
     </aside>
